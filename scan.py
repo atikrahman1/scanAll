@@ -3,7 +3,7 @@ import argparse
 import subprocess
 import yaml
 
-
+#function to reduce code
 def update_command(cmd, output_dir, domain, subdomain_tool_output):
     var_map = {
         "{{output_dir}}": output_dir,
