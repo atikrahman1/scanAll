@@ -1,0 +1,4 @@
+- subfinder:
+    name: Subfinder
+    cmd: "subfinder -d {{domain}} -silent >> {{output_dir}}/{{domain}}.txt"
+    output_dir: C:/Users/user/Desktop/scanAll/{{domain}}
