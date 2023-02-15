@@ -3,6 +3,23 @@ import argparse
 import subprocess
 import yaml
 
+
+def update_command(cmd, output_dir, domain, subdomain_tool_output):
+    var_map = {
+        "{{output_dir}}": output_dir,
+        # "{{domain}}": domain,
+        "{{subdomain_list}}": os.path.join(output_dir, f"{domain}_subfinder.txt"),
+        "{{httpx_output}}": os.path.join(output_dir, f"{domain}_httpx.txt"),
+        "{{getJS_output}}": os.path.join(output_dir, f"{domain}_getJS.txt"),
+    }
+    for var, val in var_map.items():
+        if var in cmd:
+            cmd = cmd.replace(var, val)
+    if subdomain_tool_output:
+        cmd = cmd.replace("{{subdomain_tool_output}}", os.path.join(output_dir, f"{domain}_{subdomain_tool_output}.txt"))
+    return cmd
+
+
 def run_tool(tool_name, domain, output_dir,config_dir):
     #get the tool name and open that tool name .yaml file in config_dir
     try:
@@ -14,22 +31,13 @@ def run_tool(tool_name, domain, output_dir,config_dir):
                 cmd = tool["cmd"].replace("{{domain}}", domain)
                 #check if output_dir variable on yaml file inside cmd key
                 if "{{output_dir}}" in cmd:
-                    cmd = cmd.replace("{{output_dir}}", output_dir)
-                #check if subdomain_list variable on yaml file inside cmd key
+                    cmd = update_command(cmd, output_dir, domain, None)
                 if "{{subdomain_list}}" in cmd:
-                    subdomain = os.path.join(output_dir, domain+'_subfinder.txt')
-                    if os.path.exists(subdomain):
-                        cmd = cmd.replace("{{subdomain_list}}", subdomain)
-                    else:
-                       print("Required Subdomain list not found in the output")
-                       exit()
+                    cmd = update_command(cmd, output_dir, domain, "subfinder")
                 if "{{httpx_output}}" in cmd:
-                    subdomain = os.path.join(output_dir, domain+'_httpx.txt')
-                    if os.path.exists(subdomain):
-                        cmd = cmd.replace("{{httpx_output}}", subdomain)
-                    else:
-                       print("Required Httpx output list not found in the output")
-                       exit()
+                    cmd = update_command(cmd, output_dir, domain, "httpx")
+                if "{{getJS_output}}" in cmd:
+                    cmd = update_command(cmd, output_dir, domain, "getJS")
 
                 print(f"Running tool: {tool['name']}")
                 print(cmd)

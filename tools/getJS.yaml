@@ -1,0 +1,3 @@
+- getJS:
+    name: getJS to grab all Javascript file
+    cmd: "getJS --input {{httpx_output}} --output {{output_dir}}/{{domain}}_getJS.txt --insecure --complete"
