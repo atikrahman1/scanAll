@@ -1,34 +1,33 @@
-import argparse
 import os
+import argparse
 import subprocess
 import yaml
 
+def run_tool(tool, domain, output_dir):
+    cmd = tool["cmd"].replace("{{domain}}", domain).replace("{{output_dir}}", output_dir)
+    print(f"Running tool: {tool['name']}")
+    subprocess.run(cmd, shell=True, check=True)
+
+def run_scan(config_dir, domain, output_dir):
+    for filename in os.listdir(config_dir):
+        if filename.endswith(".yaml"):
+            with open(os.path.join(config_dir, filename), 'r') as f:
+                data = yaml.safe_load(f)
+                for tool in data:
+                    if "cmd" in tool.get("subfinder", {}):
+                        run_tool(tool["subfinder"], domain, output_dir)
 
 def main():
-    # Parse command line arguments
-    parser = argparse.ArgumentParser(description='Run a tool from a YAML configuration file')
-    parser.add_argument('-f','--config', help='the YAML configuration file')
-    parser.add_argument('-d','--domain', help='the domain name')
+    parser = argparse.ArgumentParser(description="Run a set of security tools for a given domain.")
+    parser.add_argument("domain", help="The domain to scan.")
+    parser.add_argument("config_dir", help="The directory containing the tool configuration YAML files.")
+    parser.add_argument("--output-dir", "-o", default="./output", help="The directory where tool output will be stored.")
     args = parser.parse_args()
 
-    # Load the YAML configuration file
-    with open(args.config) as f:
-        data = yaml.safe_load(f)
+    output_dir = os.path.join(args.output_dir, args.domain)
+    os.makedirs(output_dir, exist_ok=True)
 
-    # Check if the output directory exists, create it if it doesn't
-    output_dir = data[0]['subfinder']['output_dir']
-    if not os.path.exists(output_dir):
-        output_dir = data[0]['subfinder']['output_dir'].replace('{{domain}}', args.domain)
-        os.makedirs(output_dir)
-
-    # Build the subfinder command with the domain name and output directory
-    subfinder_cmd = data[0]['subfinder']['cmd'].replace('{{domain}}', args.domain)
-    subfinder_cmd = subfinder_cmd.replace('{{output_dir}}', output_dir)
-
-    # Run the subfinder command and print the output to the console
-    result = subprocess.run(subfinder_cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print(result.stdout.decode('utf-8'))
-
+    run_scan(args.config_dir, args.domain, output_dir)
 
 if __name__ == '__main__':
     main()

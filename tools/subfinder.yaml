@@ -1,0 +1,6 @@
+- subfinder:
+    name: Subfinder
+    cmd: "subfinder -d {{domain}} -silent >> {{output_dir}}/{{domain}}_subfinder.txt"
+
+
+
