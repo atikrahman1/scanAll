@@ -1,0 +1,3 @@
+- httpx:
+    name: Httpx for Resolving Subdomains
+    cmd: "httpx -l {{subdomain_list}} -o {{output_dir}}/{{domain}}_httpx.txt"

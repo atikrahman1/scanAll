@@ -1,0 +1,4 @@
+https://frontend.zerocopter.com
+https://config.zerocopter.com
+https://staging-frontend.zerocopter.com
+https://static.zerocopter.com

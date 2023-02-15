@@ -1,0 +1,3 @@
+- dnsprobe:
+    name: Cname Scanning
+    cmd: "dnsprobe -l {{httpx_output}} -r CNAME -o {{output_dir}}/{{domain}}_dnsprobe.txt"

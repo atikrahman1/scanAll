@@ -1,0 +1,9 @@
+# Nmap 7.93 scan initiated Wed Feb 15 22:16:05 2023 as: nmap -p 1-1000 -oN ./output\\example.com/example.com_nmap.txt example.com
+Nmap scan report for example.com (93.184.216.34)
+Host is up (0.44s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Wed Feb 15 22:16:58 2023 -- 1 IP address (1 host up) scanned in 52.89 seconds

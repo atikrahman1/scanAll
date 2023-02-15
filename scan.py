@@ -3,38 +3,74 @@ import argparse
 import subprocess
 import yaml
 
-def run_tool(tool, domain, output_dir):
-    cmd = tool["cmd"].replace("{{domain}}", domain)
-    if "{{output_dir}}" in cmd:
-        cmd = cmd.replace("{{output_dir}}", output_dir)
+def run_tool(tool_name, domain, output_dir,config_dir):
+    #get the tool name and open that tool name .yaml file in config_dir
+    try:
+        with open(os.path.join(config_dir, tool_name+'.yaml'), 'r') as f:
+            data = yaml.safe_load(f)
+            #check if cmd key exist in yaml file to run
+            if "cmd" in data[0][tool_name]:
+                tool = data[0][tool_name]
+                cmd = tool["cmd"].replace("{{domain}}", domain)
+                #check if output_dir variable on yaml file inside cmd key
+                if "{{output_dir}}" in cmd:
+                    cmd = cmd.replace("{{output_dir}}", output_dir)
+                #check if subdomain_list variable on yaml file inside cmd key
+                if "{{subdomain_list}}" in cmd:
+                    subdomain = os.path.join(output_dir, domain+'_subfinder.txt')
+                    if os.path.exists(subdomain):
+                        cmd = cmd.replace("{{subdomain_list}}", subdomain)
+                    else:
+                       print("Required Subdomain list not found in the output")
+                       exit()
+                if "{{httpx_output}}" in cmd:
+                    subdomain = os.path.join(output_dir, domain+'_httpx.txt')
+                    if os.path.exists(subdomain):
+                        cmd = cmd.replace("{{httpx_output}}", subdomain)
+                    else:
+                       print("Required Httpx output list not found in the output")
+                       exit()
 
-    print(f"Running tool: {tool['name']}")
-    subprocess.run(cmd, shell=True, check=True)
+                print(f"Running tool: {tool['name']}")
+                print(cmd)
+                subprocess.run(cmd, shell=True, check=True)
+            else:
+                print(f"{tool_name} Command not found in Yaml file")
+    except FileNotFoundError as e:
+        print(f"Configuration file not found for tool '{tool_name}'")
+        exit()
 
+def run_workflow(config_dir, workflow_file, domain, output_dir):
+    with open(workflow_file, 'r') as f:
+        data = yaml.safe_load(f)
+        for tool in data:
+            run_tool(tool,domain,output_dir,config_dir)
 
 def run_scan(config_dir, domain, output_dir=None):
+    #find all .yaml tools file in config dir
     for filename in os.listdir(config_dir):
         if filename.endswith(".yaml"):
-            with open(os.path.join(config_dir, filename), 'r') as f:
-                data = yaml.safe_load(f)
-            for tool in data[0]:
-                if "cmd" in data[0][tool]:
-                    run_tool(data[0][tool], domain, output_dir)
-                else:
-                    print(f"{tool} Command not found in Yaml file")
+            #remove .yaml extension from the file
+            tool_name_only = filename.rsplit('.', maxsplit=1)[0] 
+            run_tool(tool_name_only, domain, output_dir,config_dir)
 
 
-def main():
+def main(workflow=False):
     parser = argparse.ArgumentParser(description="Run a set of security tools for a given domain.")
     parser.add_argument("domain", help="The domain to scan.")
     parser.add_argument("config_dir", help="The directory containing the tool configuration YAML files.")
     parser.add_argument("--output-dir", "-o", default="./output", help="The directory where tool output will be stored.")
+    parser.add_argument("--workflow-file", "-w", help="The YAML file containing the tool workflow.")
     args = parser.parse_args()
 
     output_dir = os.path.join(args.output_dir, args.domain)
     os.makedirs(output_dir, exist_ok=True)
 
-    run_scan(args.config_dir, args.domain, output_dir)
+    if args.workflow_file:
+        run_workflow(args.config_dir, args.workflow_file, args.domain, output_dir)
+    else:
+        run_scan(args.config_dir, args.domain, output_dir)
+
 
 if __name__ == '__main__':
     main()
