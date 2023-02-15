@@ -1,0 +1,19 @@
+# Nmap 7.93 scan initiated Wed Feb 15 19:43:00 2023 as: nmap -p 1-1000 -oN ./output\\evil.com/evil.com_nmap.txt evil.com
+Nmap scan report for evil.com (66.96.146.129)
+Host is up (0.30s latency).
+rDNS record for 66.96.146.129: 129.146.96.66.static.eigbox.net
+Not shown: 989 filtered tcp ports (no-response)
+PORT    STATE  SERVICE
+20/tcp  closed ftp-data
+21/tcp  open   ftp
+25/tcp  open   smtp
+80/tcp  open   http
+110/tcp open   pop3
+143/tcp open   imap
+443/tcp open   https
+465/tcp open   smtps
+587/tcp open   submission
+993/tcp open   imaps
+995/tcp open   pop3s
+
+# Nmap done at Wed Feb 15 19:46:49 2023 -- 1 IP address (1 host up) scanned in 228.82 seconds

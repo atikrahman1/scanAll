@@ -1,0 +1,3 @@
+- nmap:
+    name: Nmap Basic Port Scan
+    cmd: "nmap {{domain}} -p 1-1000 -oN {{output_dir}}/{{domain}}_nmap.txt"

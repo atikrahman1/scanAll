@@ -4,18 +4,25 @@ import subprocess
 import yaml
 
 def run_tool(tool, domain, output_dir):
-    cmd = tool["cmd"].replace("{{domain}}", domain).replace("{{output_dir}}", output_dir)
+    cmd = tool["cmd"].replace("{{domain}}", domain)
+    if "{{output_dir}}" in cmd:
+        cmd = cmd.replace("{{output_dir}}", output_dir)
+
     print(f"Running tool: {tool['name']}")
     subprocess.run(cmd, shell=True, check=True)
 
-def run_scan(config_dir, domain, output_dir):
+
+def run_scan(config_dir, domain, output_dir=None):
     for filename in os.listdir(config_dir):
         if filename.endswith(".yaml"):
             with open(os.path.join(config_dir, filename), 'r') as f:
                 data = yaml.safe_load(f)
-                for tool in data:
-                    if "cmd" in tool.get("subfinder", {}):
-                        run_tool(tool["subfinder"], domain, output_dir)
+            for tool in data[0]:
+                if "cmd" in data[0][tool]:
+                    run_tool(data[0][tool], domain, output_dir)
+                else:
+                    print(f"{tool} Command not found in Yaml file")
+
 
 def main():
     parser = argparse.ArgumentParser(description="Run a set of security tools for a given domain.")
