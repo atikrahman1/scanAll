@@ -8,7 +8,7 @@ def update_command(cmd, output_dir, domain, subdomain_tool_output):
     var_map = {
         "{{output_dir}}": output_dir,
         # "{{domain}}": domain,
-        "{{subdomain_list}}": os.path.join(output_dir, f"{domain}_subfinder.txt"),
+        "{{subfinder_output}}": os.path.join(output_dir, f"{domain}_subfinder.txt"),
         "{{httpx_output}}": os.path.join(output_dir, f"{domain}_httpx.txt"),
         "{{getJS_output}}": os.path.join(output_dir, f"{domain}_getJS.txt"),
     }
@@ -32,7 +32,7 @@ def run_tool(tool_name, domain, output_dir,config_dir):
                 #check if output_dir variable on yaml file inside cmd key
                 if "{{output_dir}}" in cmd:
                     cmd = update_command(cmd, output_dir, domain, None)
-                if "{{subdomain_list}}" in cmd:
+                if "{{subfinder_output}}" in cmd:
                     cmd = update_command(cmd, output_dir, domain, "subfinder")
                 if "{{httpx_output}}" in cmd:
                     cmd = update_command(cmd, output_dir, domain, "httpx")

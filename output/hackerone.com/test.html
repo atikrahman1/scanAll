@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>FFUF Report - </title>
+
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+	/>
+	<link 
+	  rel="stylesheet" 
+	  type="text/css" 
+	  href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"
+	/>
+  
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">FFUF</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+
+    <main class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br /><br />
+        <h1 class="header center ">FFUF Report</h1>
+        <div class="row center">
+
+		<pre>ffuf -u urls/words -w hackerone.com_httpx.txt:urls -w E:\PENTEST-POCS\master_wordlist.txt:words -mc 200,403 -ac -o test.html -of html</pre>
+		<pre>2023-02-16T15:48:06&#43;06:00</pre>
+
+   <table id="ffufreport">
+        <thead>
+        <div style="display:none">
+|result_raw|StatusCode|Input|Position|ContentLength|ContentWords|ContentLines|ContentType|Duration|Resultfile|ScraperData|
+        </div>
+          <tr>
+              <th>Status</th>
+              <th>urls</th>
+              <th>words</th>
+
+			  <th>URL</th>
+			  <th>Redirect location</th>
+              <th>Position</th>
+              <th>Length</th>
+              <th>Words</th>
+			  <th>Lines</th>
+			  <th>Type</th>
+              <th>Duration</th>
+			  <th>Resultfile</th>
+              <th>Scraper data</th>
+          </tr>
+        </thead>
+
+        <tbody>
+			
+                <div style="display:none">
+|result_raw|200|45b19c6e|https://docs.hackerone.com|404|https://docs.hackerone.com/404||3182|49297|1117|69|text/html; charset=utf-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b19c6e</td>
+                    
+                        <td>https://docs.hackerone.com</td>
+                    
+                        <td>404</td>
+                    
+                    <td><a href="https://docs.hackerone.com/404">https://docs.hackerone.com/404</a></td>
+                    <td><a href=""></a></td>
+                    <td>3182</td>
+                    <td>49297</td>
+                    <td>1117</td>
+					<td>69</td>
+					<td>text/html; charset=utf-8</td>
+					<td>276.4072ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|45b192787|https://app.zerocopter.com|favicon.ico|https://app.zerocopter.com/favicon.ico||10119|0|1|1|image/vnd.microsoft.icon|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b192787</td>
+                    
+                        <td>https://app.zerocopter.com</td>
+                    
+                        <td>favicon.ico</td>
+                    
+                    <td><a href="https://app.zerocopter.com/favicon.ico">https://app.zerocopter.com/favicon.ico</a></td>
+                    <td><a href=""></a></td>
+                    <td>10119</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>image/vnd.microsoft.icon</td>
+					<td>20.2474ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|45b192788|https://docs.hackerone.com|favicon.ico|https://docs.hackerone.com/favicon.ico||10120|5430|10|4|image/vnd.microsoft.icon|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b192788</td>
+                    
+                        <td>https://docs.hackerone.com</td>
+                    
+                        <td>favicon.ico</td>
+                    
+                    <td><a href="https://docs.hackerone.com/favicon.ico">https://docs.hackerone.com/favicon.ico</a></td>
+                    <td><a href=""></a></td>
+                    <td>10120</td>
+                    <td>5430</td>
+                    <td>10</td>
+					<td>4</td>
+					<td>image/vnd.microsoft.icon</td>
+					<td>80.934ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|45b192c14|https://docs.hackerone.com|index|https://docs.hackerone.com/index||11284|60407|1231|69|text/html; charset=utf-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b192c14</td>
+                    
+                        <td>https://docs.hackerone.com</td>
+                    
+                        <td>index</td>
+                    
+                    <td><a href="https://docs.hackerone.com/index">https://docs.hackerone.com/index</a></td>
+                    <td><a href=""></a></td>
+                    <td>11284</td>
+                    <td>60407</td>
+                    <td>1231</td>
+					<td>69</td>
+					<td>text/html; charset=utf-8</td>
+					<td>262.256ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|45b192c34|https://docs.hackerone.com|index.html|https://docs.hackerone.com/index.html||11316|60407|1231|69|text/html; charset=utf-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b192c34</td>
+                    
+                        <td>https://docs.hackerone.com</td>
+                    
+                        <td>index.html</td>
+                    
+                    <td><a href="https://docs.hackerone.com/index.html">https://docs.hackerone.com/index.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>11316</td>
+                    <td>60407</td>
+                    <td>1231</td>
+					<td>69</td>
+					<td>text/html; charset=utf-8</td>
+					<td>262.1416ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|45b193d8d|https://app.zerocopter.com|robots.txt|https://app.zerocopter.com/robots.txt||15757|26|3|3|text/plain|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b193d8d</td>
+                    
+                        <td>https://app.zerocopter.com</td>
+                    
+                        <td>robots.txt</td>
+                    
+                    <td><a href="https://app.zerocopter.com/robots.txt">https://app.zerocopter.com/robots.txt</a></td>
+                    <td><a href=""></a></td>
+                    <td>15757</td>
+                    <td>26</td>
+                    <td>3</td>
+					<td>3</td>
+					<td>text/plain</td>
+					<td>15.1386ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|45b193ea1|https://app.zerocopter.com|security.txt|https://app.zerocopter.com/security.txt||16033|1299|18|29|text/plain|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>45b193ea1</td>
+                    
+                        <td>https://app.zerocopter.com</td>
+                    
+                        <td>security.txt</td>
+                    
+                    <td><a href="https://app.zerocopter.com/security.txt">https://app.zerocopter.com/security.txt</a></td>
+                    <td><a href=""></a></td>
+                    <td>16033</td>
+                    <td>1299</td>
+                    <td>18</td>
+					<td>29</td>
+					<td>text/plain</td>
+					<td>181.973ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+        </tbody>
+      </table>
+
+        </div>
+        <br /><br />
+      </div>
+    </main>
+
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#ffufreport').DataTable(
+            {
+                "aLengthMenu": [
+                    [250, 500, 1000, 2500, -1],
+                    [250, 500, 1000, 2500, "All"]
+                ]
+            }
+        )
+        $('select').formSelect();
+        });
+    </script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </body>
+</html>
+
+	

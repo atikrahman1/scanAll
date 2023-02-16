@@ -1,0 +1,968 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>FFUF Report - </title>
+
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+	/>
+	<link 
+	  rel="stylesheet" 
+	  type="text/css" 
+	  href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"
+	/>
+  
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">FFUF</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+
+    <main class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br /><br />
+        <h1 class="header center ">FFUF Report</h1>
+        <div class="row center">
+
+		<pre>ffuf -u https://faculty.daffodilvarsity.edu.bd/FUZZ -w E:\PENTEST-POCS\master_wordlist.txt -mc 200,403 -ac -o test.html -of html</pre>
+		<pre>2023-02-16T15:31:22&#43;06:00</pre>
+
+   <table id="ffufreport">
+        <thead>
+        <div style="display:none">
+|result_raw|StatusCode|Input|Position|ContentLength|ContentWords|ContentLines|ContentType|Duration|Resultfile|ScraperData|
+        </div>
+          <tr>
+              <th>Status</th>
+              <th>FUZZ</th>
+
+			  <th>URL</th>
+			  <th>Redirect location</th>
+              <th>Position</th>
+              <th>Length</th>
+              <th>Words</th>
+			  <th>Lines</th>
+			  <th>Type</th>
+              <th>Duration</th>
+			  <th>Resultfile</th>
+              <th>Scraper data</th>
+          </tr>
+        </thead>
+
+        <tbody>
+			
+                <div style="display:none">
+|result_raw|200|280681d|.admin|https://faculty.daffodilvarsity.edu.bd/.admin||29|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681d</td>
+                    
+                        <td>.admin</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/.admin">https://faculty.daffodilvarsity.edu.bd/.admin</a></td>
+                    <td><a href=""></a></td>
+                    <td>29</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>64.7734ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280681e|.admin/|https://faculty.daffodilvarsity.edu.bd/.admin/||30|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681e</td>
+                    
+                        <td>.admin/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/.admin/">https://faculty.daffodilvarsity.edu.bd/.admin/</a></td>
+                    <td><a href=""></a></td>
+                    <td>30</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>57.4924ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068261|.html|https://faculty.daffodilvarsity.edu.bd/.html||609|14527|4156|266|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068261</td>
+                    
+                        <td>.html</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/.html">https://faculty.daffodilvarsity.edu.bd/.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>609</td>
+                    <td>14527</td>
+                    <td>4156</td>
+					<td>266</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>58.4398ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068505|.users|https://faculty.daffodilvarsity.edu.bd/.users||1285|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068505</td>
+                    
+                        <td>.users</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/.users">https://faculty.daffodilvarsity.edu.bd/.users</a></td>
+                    <td><a href=""></a></td>
+                    <td>1285</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>61.2832ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068528|.well-known/|https://faculty.daffodilvarsity.edu.bd/.well-known/||1320|978|85|17|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068528</td>
+                    
+                        <td>.well-known/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/.well-known/">https://faculty.daffodilvarsity.edu.bd/.well-known/</a></td>
+                    <td><a href=""></a></td>
+                    <td>1320</td>
+                    <td>978</td>
+                    <td>85</td>
+					<td>17</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>51.3185ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068857|Admin|https://faculty.daffodilvarsity.edu.bd/Admin||2135|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068857</td>
+                    
+                        <td>Admin</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/Admin">https://faculty.daffodilvarsity.edu.bd/Admin</a></td>
+                    <td><a href=""></a></td>
+                    <td>2135</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>60.4272ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068858|admin|https://faculty.daffodilvarsity.edu.bd/admin||2136|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068858</td>
+                    
+                        <td>admin</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin">https://faculty.daffodilvarsity.edu.bd/admin</a></td>
+                    <td><a href=""></a></td>
+                    <td>2136</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.354ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068887|admin.|https://faculty.daffodilvarsity.edu.bd/admin.||2183|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068887</td>
+                    
+                        <td>admin.</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin.">https://faculty.daffodilvarsity.edu.bd/admin.</a></td>
+                    <td><a href=""></a></td>
+                    <td>2183</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.3996ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806889b|admin.html|https://faculty.daffodilvarsity.edu.bd/admin.html||2203|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806889b</td>
+                    
+                        <td>admin.html</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin.html">https://faculty.daffodilvarsity.edu.bd/admin.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>2203</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>75.5438ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806889c|Admin.html|https://faculty.daffodilvarsity.edu.bd/Admin.html||2204|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806889c</td>
+                    
+                        <td>Admin.html</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/Admin.html">https://faculty.daffodilvarsity.edu.bd/Admin.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>2204</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>66.9103ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280688b3|admin/|https://faculty.daffodilvarsity.edu.bd/admin/||2227|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280688b3</td>
+                    
+                        <td>admin/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin/">https://faculty.daffodilvarsity.edu.bd/admin/</a></td>
+                    <td><a href=""></a></td>
+                    <td>2227</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>56.5913ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280688b6|admin/?/login|https://faculty.daffodilvarsity.edu.bd/admin/?/login||2230|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280688b6</td>
+                    
+                        <td>admin/?/login</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin/?/login">https://faculty.daffodilvarsity.edu.bd/admin/?/login</a></td>
+                    <td><a href=""></a></td>
+                    <td>2230</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>57.9369ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068913|admin/index|https://faculty.daffodilvarsity.edu.bd/admin/index||2323|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068913</td>
+                    
+                        <td>admin/index</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin/index">https://faculty.daffodilvarsity.edu.bd/admin/index</a></td>
+                    <td><a href=""></a></td>
+                    <td>2323</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.5408ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068916|admin/index.html|https://faculty.daffodilvarsity.edu.bd/admin/index.html||2326|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068916</td>
+                    
+                        <td>admin/index.html</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin/index.html">https://faculty.daffodilvarsity.edu.bd/admin/index.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>2326</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.6603ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068921|admin/login|https://faculty.daffodilvarsity.edu.bd/admin/login||2337|6512|1848|112|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068921</td>
+                    
+                        <td>admin/login</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin/login">https://faculty.daffodilvarsity.edu.bd/admin/login</a></td>
+                    <td><a href=""></a></td>
+                    <td>2337</td>
+                    <td>6512</td>
+                    <td>1848</td>
+					<td>112</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>61.4127ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068927|admin/login.html|https://faculty.daffodilvarsity.edu.bd/admin/login.html||2343|6512|1848|112|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068927</td>
+                    
+                        <td>admin/login.html</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/admin/login.html">https://faculty.daffodilvarsity.edu.bd/admin/login.html</a></td>
+                    <td><a href=""></a></td>
+                    <td>2343</td>
+                    <td>6512</td>
+                    <td>1848</td>
+					<td>112</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>61.1773ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806892c|Admin/login/|https://faculty.daffodilvarsity.edu.bd/Admin/login/||2348|6512|1848|112|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806892c</td>
+                    
+                        <td>Admin/login/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/Admin/login/">https://faculty.daffodilvarsity.edu.bd/Admin/login/</a></td>
+                    <td><a href=""></a></td>
+                    <td>2348</td>
+                    <td>6512</td>
+                    <td>1848</td>
+					<td>112</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.8619ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806810cb|contact|https://faculty.daffodilvarsity.edu.bd/contact||4299|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806810cb</td>
+                    
+                        <td>contact</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/contact">https://faculty.daffodilvarsity.edu.bd/contact</a></td>
+                    <td><a href=""></a></td>
+                    <td>4299</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.3159ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806810e4|controlpanel|https://faculty.daffodilvarsity.edu.bd/controlpanel||4324|34066|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806810e4</td>
+                    
+                        <td>controlpanel</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/controlpanel">https://faculty.daffodilvarsity.edu.bd/controlpanel</a></td>
+                    <td><a href=""></a></td>
+                    <td>4324</td>
+                    <td>34066</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>121.0227ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806810ea|controlpanel/|https://faculty.daffodilvarsity.edu.bd/controlpanel/||4330|34091|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806810ea</td>
+                    
+                        <td>controlpanel/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/controlpanel/">https://faculty.daffodilvarsity.edu.bd/controlpanel/</a></td>
+                    <td><a href=""></a></td>
+                    <td>4330</td>
+                    <td>34091</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>131.1148ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068110c|cpanel|https://faculty.daffodilvarsity.edu.bd/cpanel||4364|34066|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068110c</td>
+                    
+                        <td>cpanel</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/cpanel">https://faculty.daffodilvarsity.edu.bd/cpanel</a></td>
+                    <td><a href=""></a></td>
+                    <td>4364</td>
+                    <td>34066</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>252.3355ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068110f|cpanel/|https://faculty.daffodilvarsity.edu.bd/cpanel/||4367|34091|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068110f</td>
+                    
+                        <td>cpanel/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/cpanel/">https://faculty.daffodilvarsity.edu.bd/cpanel/</a></td>
+                    <td><a href=""></a></td>
+                    <td>4367</td>
+                    <td>34091</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>151.5612ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280681237|dist/|https://faculty.daffodilvarsity.edu.bd/dist/||4663|1115|135|18|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681237</td>
+                    
+                        <td>dist/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/dist/">https://faculty.daffodilvarsity.edu.bd/dist/</a></td>
+                    <td><a href=""></a></td>
+                    <td>4663</td>
+                    <td>1115</td>
+                    <td>135</td>
+					<td>18</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>50.5841ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806813b4|faculty|https://faculty.daffodilvarsity.edu.bd/faculty||5044|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806813b4</td>
+                    
+                        <td>faculty</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/faculty">https://faculty.daffodilvarsity.edu.bd/faculty</a></td>
+                    <td><a href=""></a></td>
+                    <td>5044</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.3733ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806815c1|images/|https://faculty.daffodilvarsity.edu.bd/images/||5569|4061|393|34|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806815c1</td>
+                    
+                        <td>images/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/images/">https://faculty.daffodilvarsity.edu.bd/images/</a></td>
+                    <td><a href=""></a></td>
+                    <td>5569</td>
+                    <td>4061</td>
+                    <td>393</td>
+					<td>34</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>60.4657ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280681620|index.php|https://faculty.daffodilvarsity.edu.bd/index.php||5664|14527|4156|266|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681620</td>
+                    
+                        <td>index.php</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/index.php">https://faculty.daffodilvarsity.edu.bd/index.php</a></td>
+                    <td><a href=""></a></td>
+                    <td>5664</td>
+                    <td>14527</td>
+                    <td>4156</td>
+					<td>266</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>60.4413ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280681704|js/|https://faculty.daffodilvarsity.edu.bd/js/||5892|1131|113|18|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681704</td>
+                    
+                        <td>js/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/js/">https://faculty.daffodilvarsity.edu.bd/js/</a></td>
+                    <td><a href=""></a></td>
+                    <td>5892</td>
+                    <td>1131</td>
+                    <td>113</td>
+					<td>18</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>50.3481ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280681745|kpanel/|https://faculty.daffodilvarsity.edu.bd/kpanel/||5957|34091|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681745</td>
+                    
+                        <td>kpanel/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/kpanel/">https://faculty.daffodilvarsity.edu.bd/kpanel/</a></td>
+                    <td><a href=""></a></td>
+                    <td>5957</td>
+                    <td>34091</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>120.9001ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|403|2806818b4|mailman/|https://faculty.daffodilvarsity.edu.bd/mailman/||6324|318|29|10|text/html; charset=iso-8859-1|
+                </div>
+                <tr class="result-403" style="background-color: ;">
+                    <td><font color="black" class="status-code">403</font></td>
+                    
+                        <td>2806818b4</td>
+                    
+                        <td>mailman/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/mailman/">https://faculty.daffodilvarsity.edu.bd/mailman/</a></td>
+                    <td><a href=""></a></td>
+                    <td>6324</td>
+                    <td>318</td>
+                    <td>29</td>
+					<td>10</td>
+					<td>text/html; charset=iso-8859-1</td>
+					<td>50.431ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806818b5|mailman/listinfo|https://faculty.daffodilvarsity.edu.bd/mailman/listinfo||6325|1657|228|45|text/html; charset=us-ascii|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806818b5</td>
+                    
+                        <td>mailman/listinfo</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/mailman/listinfo">https://faculty.daffodilvarsity.edu.bd/mailman/listinfo</a></td>
+                    <td><a href=""></a></td>
+                    <td>6325</td>
+                    <td>1657</td>
+                    <td>228</td>
+					<td>45</td>
+					<td>text/html; charset=us-ascii</td>
+					<td>172.4805ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280681f2d|search|https://faculty.daffodilvarsity.edu.bd/search||7981|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280681f2d</td>
+                    
+                        <td>search</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/search">https://faculty.daffodilvarsity.edu.bd/search</a></td>
+                    <td><a href=""></a></td>
+                    <td>7981</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>60.4179ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280682290|test/|https://faculty.daffodilvarsity.edu.bd/test/||8848|1498|143|20|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280682290</td>
+                    
+                        <td>test/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/test/">https://faculty.daffodilvarsity.edu.bd/test/</a></td>
+                    <td><a href=""></a></td>
+                    <td>8848</td>
+                    <td>1498</td>
+                    <td>143</td>
+					<td>20</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>50.7534ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806822df|tinymce/|https://faculty.daffodilvarsity.edu.bd/tinymce/||8927|2017|233|23|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806822df</td>
+                    
+                        <td>tinymce/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/tinymce/">https://faculty.daffodilvarsity.edu.bd/tinymce/</a></td>
+                    <td><a href=""></a></td>
+                    <td>8927</td>
+                    <td>2017</td>
+                    <td>233</td>
+					<td>23</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>50.4274ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|280682387|upload/|https://faculty.daffodilvarsity.edu.bd/upload/||9095|961|92|17|text/html;charset=ISO-8859-1|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>280682387</td>
+                    
+                        <td>upload/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/upload/">https://faculty.daffodilvarsity.edu.bd/upload/</a></td>
+                    <td><a href=""></a></td>
+                    <td>9095</td>
+                    <td>961</td>
+                    <td>92</td>
+					<td>17</td>
+					<td>text/html;charset=ISO-8859-1</td>
+					<td>50.3949ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806823d0|users|https://faculty.daffodilvarsity.edu.bd/users||9168|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806823d0</td>
+                    
+                        <td>users</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/users">https://faculty.daffodilvarsity.edu.bd/users</a></td>
+                    <td><a href=""></a></td>
+                    <td>9168</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>50.3465ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|2806823de|users/|https://faculty.daffodilvarsity.edu.bd/users/||9182|0|1|1|text/html; charset=UTF-8|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>2806823de</td>
+                    
+                        <td>users/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/users/">https://faculty.daffodilvarsity.edu.bd/users/</a></td>
+                    <td><a href=""></a></td>
+                    <td>9182</td>
+                    <td>0</td>
+                    <td>1</td>
+					<td>1</td>
+					<td>text/html; charset=UTF-8</td>
+					<td>60.4924ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068255e|webmail/src/configtest.php|https://faculty.daffodilvarsity.edu.bd/webmail/src/configtest.php||9566|34308|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068255e</td>
+                    
+                        <td>webmail/src/configtest.php</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/webmail/src/configtest.php">https://faculty.daffodilvarsity.edu.bd/webmail/src/configtest.php</a></td>
+                    <td><a href=""></a></td>
+                    <td>9566</td>
+                    <td>34308</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>131.1404ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068255d|webmail/|https://faculty.daffodilvarsity.edu.bd/webmail/||9565|34096|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068255d</td>
+                    
+                        <td>webmail/</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/webmail/">https://faculty.daffodilvarsity.edu.bd/webmail/</a></td>
+                    <td><a href=""></a></td>
+                    <td>9565</td>
+                    <td>34096</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>161.4147ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+                <div style="display:none">
+|result_raw|200|28068255f|webmail/src/configtest.phpv1.1.0-git&#34;|https://faculty.daffodilvarsity.edu.bd/webmail/src/configtest.phpv1.1.0-git&#34;||9567|34461|1364|330|text/html|
+                </div>
+                <tr class="result-200" style="background-color: ;">
+                    <td><font color="black" class="status-code">200</font></td>
+                    
+                        <td>28068255f</td>
+                    
+                        <td>webmail/src/configtest.phpv1.1.0-git&#34;</td>
+                    
+                    <td><a href="https://faculty.daffodilvarsity.edu.bd/webmail/src/configtest.phpv1.1.0-git%22">https://faculty.daffodilvarsity.edu.bd/webmail/src/configtest.phpv1.1.0-git&#34;</a></td>
+                    <td><a href=""></a></td>
+                    <td>9567</td>
+                    <td>34461</td>
+                    <td>1364</td>
+					<td>330</td>
+					<td>text/html</td>
+					<td>161.4129ms</td>
+                    <td></td>
+					<td>
+                </tr>
+            
+        </tbody>
+      </table>
+
+        </div>
+        <br /><br />
+      </div>
+    </main>
+
+    
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#ffufreport').DataTable(
+            {
+                "aLengthMenu": [
+                    [250, 500, 1000, 2500, -1],
+                    [250, 500, 1000, 2500, "All"]
+                ]
+            }
+        )
+        $('select').formSelect();
+        });
+    </script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </body>
+</html>
+
+	

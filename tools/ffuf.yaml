@@ -1,0 +1,3 @@
+- ffuf:
+    name: FFUF to scan all subdomains for files
+    cmd: "ffuf -u 'urls/words' -w {{httpx_output}}:urls -w E:\\PENTEST-POCS\\master_wordlist.txt:words -mc 200,403 -ac -o {{output_dir}}/{{domain}}_ffuf.html -of html"
